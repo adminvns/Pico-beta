@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainContent"
-    tools:context="xtremecreations.surfer.Home">
+    tools:context="xtremecreations.surfer.patelelectric.surfer.Home">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
         </android.support.v7.widget.CardView>
 
     </RelativeLayout>
-    <xtremecreations.surfer.NestedWebView
+    <patelelectric.pico.NestedWebView
         android:id="@+id/surfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

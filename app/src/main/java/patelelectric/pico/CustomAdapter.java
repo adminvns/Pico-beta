@@ -1,4 +1,4 @@
-package xtremecreations.surfer;
+package patelelectric.pico;
 import android.content.Context;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -7,10 +7,11 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import xtremecreations.surfer.R;
+
 public class CustomAdapter extends BaseAdapter{
     String [] result;
     Home context;

@@ -1,4 +1,4 @@
-package xtremecreations.surfer;
+package patelelectric.pico;
 
 import android.content.Context;
 import android.support.v4.view.MotionEventCompat;
@@ -7,9 +7,7 @@ import android.support.v4.view.NestedScrollingChildHelper;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.Toast;
 
 public class NestedWebView extends WebView implements NestedScrollingChild {
     private int mLastY;

@@ -1,10 +1,9 @@
-package xtremecreations.surfer;
+package patelelectric.pico;
 import android.content.Context;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 public class BottomBarBehavior extends CoordinatorLayout.Behavior<LinearLayout> {
     private float defaultDependencyTop = -1f;

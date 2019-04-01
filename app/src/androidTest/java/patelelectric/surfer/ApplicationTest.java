@@ -1,4 +1,4 @@
-package xtremecreations.surfer;
+package patelelectric.surfer;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

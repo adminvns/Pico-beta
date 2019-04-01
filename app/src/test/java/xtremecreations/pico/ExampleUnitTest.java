@@ -1,4 +1,4 @@
-package xtremecreations.surfer;
+package xtremecreations.pico;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package xtremecreations.surfer;
+package patelelectric.pico;
 
 import android.annotation.TargetApi;
 import android.content.Context;

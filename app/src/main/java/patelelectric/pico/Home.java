@@ -1,4 +1,4 @@
-package xtremecreations.surfer;
+package patelelectric.pico;
 
 import android.Manifest;
 import android.animation.Animator;
@@ -60,7 +60,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.webkit.DownloadListener;
 import android.webkit.GeolocationPermissions;
 import android.webkit.SslErrorHandler;
-import android.webkit.WebBackForwardList;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -69,13 +68,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -96,16 +93,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import xtremecreations.surfer.R;
+
 public class Home extends AppCompatActivity {
     SharedPreferences ad_preferences,settings;
     SharedPreferences.Editor ad_editor,settings_editor;
     RippleBackground rippleBackground_small;
-    xtremecreations.surfer.NestedWebView surf;
+    NestedWebView surf;
     SurfaceView cameraView;
     BarcodeDetector barcode;
     Button allow_camera;
-    xtremecreations.surfer.CameraSource cameraSource;
-    xtremecreations.surfer.CameraSource.Builder cameraBuild;
+    patelelectric.pico.CameraSource cameraSource;
+    patelelectric.pico.CameraSource.Builder cameraBuild;
     SurfaceHolder holder;
     EditText addbar;
     ProgressBar cloader, loader;
@@ -415,7 +414,7 @@ public class Home extends AppCompatActivity {
                     case MotionEvent.ACTION_MOVE:
                         if(!menu_rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())){its_out=1;}
                         else{its_out=0;}
-                        //tittle.setText( reReady+" , "+me_back+" , "+me_for+" , "+me_back_over+" , "+its_loading+" , "+me_back_over+" , "+me_for_over);
+                        tittle.setText( reReady+" , "+me_back+" , "+me_for+" , "+me_back_over+" , "+its_loading+" , "+me_back_over+" , "+me_for_over);
                         if(menu_reload.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())&& its_loading==0 && reReady == 0 && me_back==0 && me_for==0 && me_back_over==0&& me_for_over==0)
                         {
                             animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.float_show);
@@ -818,7 +817,7 @@ public class Home extends AppCompatActivity {
         if (!barcode.isOperational()) {
             Toast.makeText(Home.this, "Feature not Supported by device !", Toast.LENGTH_SHORT).show();
         }
-        cameraBuild=new xtremecreations.surfer.CameraSource.Builder(Home.this, barcode);
+        cameraBuild=new patelelectric.pico.CameraSource.Builder(Home.this, barcode);
         cameraBuild.setFacing(CameraSource.CAMERA_FACING_BACK);
         cameraBuild.setRequestedPreviewSize(1080, 1920);
         cameraBuild.setRequestedFps(60.0f);
@@ -1219,7 +1218,7 @@ public class Home extends AppCompatActivity {
     {return Color.argb(Math.round(Color.alpha(col)*factor),Color.red(col),Color.green(col),Color.blue(col));}
 
     public void addWebView(){
-        surf=(xtremecreations.surfer.NestedWebView) findViewById(R.id.surfView);
+        surf=(NestedWebView) findViewById(R.id.surfView);
         WebSettings settings = surf.getSettings();
         settings.setDefaultTextEncodingName("utf-8");
         settings.setJavaScriptEnabled(true);
@@ -1524,7 +1523,7 @@ public class Home extends AppCompatActivity {
                 .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {}
                 })
-                .setIcon(R.drawable.icon)
+                .setIcon(R.mipmap.logo)
                 .show();
     }
 

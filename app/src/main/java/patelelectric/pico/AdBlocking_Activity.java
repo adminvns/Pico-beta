@@ -1,19 +1,15 @@
-package xtremecreations.surfer;
+package patelelectric.pico;
 
 import android.animation.ValueAnimator;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.provider.MediaStore;
-import android.support.v4.view.ViewPager;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -24,6 +20,8 @@ import com.liuguangqiang.swipeback.SwipeBackLayout;
 import com.skyfishjy.library.RippleBackground;
 
 import java.io.ByteArrayOutputStream;
+
+import xtremecreations.surfer.R;
 
 public class AdBlocking_Activity extends SwipeBackActivity {
     RippleBackground rippleBackground;

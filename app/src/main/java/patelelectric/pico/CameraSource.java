@@ -1,4 +1,4 @@
-package xtremecreations.surfer;
+package patelelectric.pico;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
