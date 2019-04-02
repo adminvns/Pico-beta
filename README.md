@@ -19,5 +19,6 @@ Those days were not bad when we had a separate application for scanning **QR Cod
 
 -Shubham Singh
 shubham.editor@gmail.com
-Download Link
+
+### Downloading Link:-
 http://www.mediafire.com/file/058tecbm4b8yeuy/PICO_BETA.apk/file
