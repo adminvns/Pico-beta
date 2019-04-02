@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainContent"
-    tools:context="xtremecreations.surfer.patelelectric.surfer.Home">
+    tools:context="patelelectric.pico.Home">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -73,7 +73,7 @@
         android:layout_height="245dp"
         android:id="@+id/menuhold"
         android:layout_gravity="bottom"
-        app:layout_behavior="xtremecreations.surfer.BottomBarBehavior">
+        app:layout_behavior="patelelectric.pico.BottomBarBehavior">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -785,94 +785,125 @@
     </io.codetail.widget.RevealFrameLayout>
 
     <io.codetail.widget.RevealLinearLayout
+        android:id="@+id/addpanefloat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:elevation="11dp"
         android:background="#9c000000"
-        android:id="@+id/addpanefloat"
-        android:clickable="true">
+        android:clickable="true"
+        android:elevation="11dp">
+
         <android.support.v7.widget.CardView
-            app:cardElevation="10dp"
+            android:id="@+id/addhover"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="8dp"
-            android:id="@+id/addhover"
-            android:background="@color/menucolor">
+            android:background="@color/menucolor"
+            app:cardElevation="10dp">
+
             <RelativeLayout
+                android:id="@+id/listpane"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/listpane"
                 android:background="@color/menucolor">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TableLayout
+                        android:id="@+id/searchtype"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/menucolor"
-                        android:id="@+id/searchtype"
                         android:stretchColumns="*">
+
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+
                             <android.support.v7.widget.CardView
-                                app:cardBackgroundColor="@color/BluecolorPrimary"
-                                app:cardElevation="3dp"
+                                android:id="@+id/search_engine"
                                 android:layout_width="0dp"
                                 android:layout_height="30dp"
-                                android:id="@+id/search_engine"
                                 android:layout_column="0"
                                 android:layout_margin="5dp"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                app:cardBackgroundColor="@color/BluecolorPrimary"
+                                app:cardElevation="3dp">
+
+
+
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
-                                    android:textColor="@color/menucolor"
-                                    android:text="Google"/>
+                                    android:text="Google"
+                                    android:textColor="@color/menucolor" />
                             </android.support.v7.widget.CardView>
+
                             <android.support.v7.widget.CardView
-                                app:cardBackgroundColor="@color/GreencolorPrimary"
-                                app:cardElevation="3dp"
+                                android:id="@+id/search_type"
                                 android:layout_width="0dp"
                                 android:layout_height="30dp"
-                                android:id="@+id/search_type"
                                 android:layout_column="1"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                app:cardBackgroundColor="@color/GreencolorPrimary"
+                                app:cardElevation="3dp">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="Facebook"
+                                    android:textColor="@color/menucolor" />
                             </android.support.v7.widget.CardView>
+
                             <android.support.v7.widget.CardView
-                                app:cardBackgroundColor="@color/RedcolorPrimary"
-                                app:cardElevation="3dp"
+                                android:id="@+id/search_no"
                                 android:layout_width="0dp"
                                 android:layout_height="30dp"
-                                android:id="@+id/search_no"
                                 android:layout_column="2"
                                 android:layout_margin="5dp"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                app:cardBackgroundColor="@color/RedcolorPrimary"
+                                app:cardElevation="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="News"
+                                    android:textColor="@color/menucolor" />
                             </android.support.v7.widget.CardView>
                         </TableRow>
                     </TableLayout>
-                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:id="@+id/divider1" android:background="?android:attr/listDivider"/>
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="?android:attr/listDivider" />
+
                     <ListView
+                        android:id="@+id/searchlist"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
                         android:layout_alignParentBottom="true"
-                        android:id="@+id/searchlist">
-                    </ListView>
+                        android:layout_marginTop="0dp"></ListView>
                 </LinearLayout>
+
                 <io.codetail.widget.RevealLinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
                     android:layout_marginTop="40dp">
+
                     <android.support.v7.widget.CardView
-                        app:cardBackgroundColor="@color/BluecolorPrimary"
-                        app:cardElevation="3dp"
                         android:id="@+id/engine"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -880,16 +911,17 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp">
-                    </android.support.v7.widget.CardView>
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="@color/BluecolorPrimary"
+                        app:cardElevation="3dp"></android.support.v7.widget.CardView>
                 </io.codetail.widget.RevealLinearLayout>
+
                 <io.codetail.widget.RevealLinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
                     android:layout_marginTop="40dp">
+
                     <android.support.v7.widget.CardView
-                        app:cardBackgroundColor="@color/GreencolorPrimary"
-                        app:cardElevation="3dp"
                         android:id="@+id/type_search"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -897,16 +929,17 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp">
-                    </android.support.v7.widget.CardView>
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="@color/GreencolorPrimary"
+                        app:cardElevation="3dp"></android.support.v7.widget.CardView>
                 </io.codetail.widget.RevealLinearLayout>
+
                 <io.codetail.widget.RevealLinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
                     android:layout_marginTop="40dp">
+
                     <android.support.v7.widget.CardView
-                        app:cardBackgroundColor="@color/RedcolorPrimary"
-                        app:cardElevation="3dp"
                         android:id="@+id/suggestion"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -914,8 +947,9 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp">
-                    </android.support.v7.widget.CardView>
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="@color/RedcolorPrimary"
+                        app:cardElevation="3dp"></android.support.v7.widget.CardView>
                 </io.codetail.widget.RevealLinearLayout>
             </RelativeLayout>
         </android.support.v7.widget.CardView>

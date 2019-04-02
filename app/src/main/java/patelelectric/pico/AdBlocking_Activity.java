@@ -21,7 +21,7 @@ import com.skyfishjy.library.RippleBackground;
 
 import java.io.ByteArrayOutputStream;
 
-import xtremecreations.surfer.R;
+import patelelectric.pico.R;
 
 public class AdBlocking_Activity extends SwipeBackActivity {
     RippleBackground rippleBackground;

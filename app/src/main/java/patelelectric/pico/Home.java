@@ -4,6 +4,7 @@ import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -93,7 +94,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import xtremecreations.surfer.R;
+import patelelectric.pico.R;
 
 public class Home extends AppCompatActivity {
     SharedPreferences ad_preferences,settings;
@@ -929,7 +930,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("XtremeSurfer Scan",scan_text.getText().toString());
+                ClipData clip = ClipData.newPlainText("PICO Scan",scan_text.getText().toString());
                 clipboard.setPrimaryClip(clip);
                 Toast.makeText(Home.this, "Copied to Clipboard", Toast.LENGTH_SHORT).show();
             }
@@ -1271,7 +1272,9 @@ public class Home extends AppCompatActivity {
             @Override
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl){
                 if(errorCode==-6){view.loadData(errorpage("Something Went Wrong","The Page You Requested, Can't Be Reached"), "text/html", null);}
-                else if(errorCode==-2){view.loadData(errorpage("No Internet Connection","Wifi or Mobile Data Should Be Active"), "text/html", null);}
+                else if(errorCode==-2){
+                    Toast.makeText(Home.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+                    view.loadData(errorpage("No Internet Connection","Wifi or Mobile Data Should Be Active"), "text/html", null);}
                 else if(errorCode==-10){view.loadData(errorpage("You are Lost!","Webpage Not Available"), "text/html", null);}
                 else if(errorCode==-8){view.loadData(errorpage("Error Occured!","Connection Timed Out"), "text/html", null);}
                 fevicon.setBackgroundResource(R.drawable.error);
@@ -1508,10 +1511,11 @@ public class Home extends AppCompatActivity {
             else {if(addhoveractive==0){showAddHover();}addbar.setText(sp);addbar.setSelection(0,sp.length());}
         }
     }
+    @SuppressLint("RestrictedApi")
     public void exit()
     {
         new AlertDialog.Builder(new ContextThemeWrapper(Home.this, R.style.DarkDialog))
-                .setTitle("Exit surfer?").setMessage("Are you sure you want to exit surfer?")
+                .setTitle("Exit Pico?").setMessage("Are you sure you want to exit Pico Browser?")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(getApplicationContext(), Splash.class);

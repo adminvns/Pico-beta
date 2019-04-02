@@ -1,4 +1,4 @@
-package patelelectric.surfer;
+package patelelectric.pico;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

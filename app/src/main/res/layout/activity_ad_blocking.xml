@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
-    tools:context="xtremecreations.surfer.patelelectric.surfer.AdBlocking_Activity">
+    tools:context="patelelectric.pico.AdBlocking_Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:text="Xtreme Surfer"
+                android:text="Pico Add Blocker"
                 android:textSize="15sp" />
         </RelativeLayout>
         <RelativeLayout

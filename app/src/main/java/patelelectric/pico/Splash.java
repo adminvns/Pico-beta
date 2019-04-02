@@ -7,8 +7,7 @@ import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ProgressBar;
-
-import xtremecreations.surfer.R;
+import patelelectric.pico.R;
 
 public class Splash extends Activity {
     int exit=0;

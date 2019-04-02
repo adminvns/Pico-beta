@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import xtremecreations.surfer.R;
+import patelelectric.pico.R;
 
 public class CustomAdapter extends BaseAdapter{
     String [] result;
