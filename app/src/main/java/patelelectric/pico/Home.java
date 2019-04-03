@@ -1433,6 +1433,7 @@ public class Home extends AppCompatActivity {
                     Animator anim=io.codetail.animation.ViewAnimationUtils.createCircularReveal(engine,search_engine.getWidth()/2,0,0,radius);
                     anim.setInterpolator(new AccelerateInterpolator());anim.setDuration(250);anim.start();on_engine=2;on_type=0;on_suggestion=0;
                     anim.addListener(new AnimatorListenerAdapter() {@Override public void onAnimationEnd(Animator animation) {on_engine=1;}});
+                    Toast.makeText(Home.this, "Tap Again!!", Toast.LENGTH_SHORT).show();
                 }
                 else if(on_engine==1)
                 {
@@ -1440,6 +1441,8 @@ public class Home extends AppCompatActivity {
                     anim.setInterpolator(new DecelerateInterpolator());anim.setDuration(250);anim.start();on_engine=2;
                     anim.addListener(new AnimatorListenerAdapter() {@Override public void onAnimationEnd(Animator animation) {on_engine=0;
                         engine.setVisibility(View.INVISIBLE);}});
+                    surf.loadUrl("https://www.google.com");
+                    hideAddHover();
                 }
             }
         });
@@ -1455,6 +1458,8 @@ public class Home extends AppCompatActivity {
                     Animator anim=io.codetail.animation.ViewAnimationUtils.createCircularReveal(type_search,type_search.getWidth()/2,0,0,radius);
                     anim.setInterpolator(new AccelerateInterpolator());anim.setDuration(250);anim.start();on_engine=0;on_type=2;on_suggestion=0;
                     anim.addListener(new AnimatorListenerAdapter() {@Override public void onAnimationEnd(Animator animation) {on_type=1;}});
+                    Toast.makeText(Home.this, "Tap Again!!", Toast.LENGTH_SHORT).show();
+
                 }
                 else if(on_type==1)
                 {
@@ -1462,6 +1467,8 @@ public class Home extends AppCompatActivity {
                     anim.setInterpolator(new DecelerateInterpolator());anim.setDuration(250);anim.start();on_type=2;
                     anim.addListener(new AnimatorListenerAdapter() {@Override public void onAnimationEnd(Animator animation) {on_type=0;
                         type_search.setVisibility(View.INVISIBLE);}});
+                    surf.loadUrl("https://facebook.com");
+                    hideAddHover();
                 }
             }
         });
@@ -1477,6 +1484,7 @@ public class Home extends AppCompatActivity {
                     Animator anim=io.codetail.animation.ViewAnimationUtils.createCircularReveal(suggestion,suggestion.getWidth()-search_no.getWidth()/2,0,0,radius);
                     anim.setInterpolator(new AccelerateInterpolator());anim.setDuration(250);anim.start();on_engine=0;on_type=0;on_suggestion=2;
                     anim.addListener(new AnimatorListenerAdapter() {@Override public void onAnimationEnd(Animator animation) {on_suggestion=1;}});
+                    Toast.makeText(Home.this, "Tap Again!!", Toast.LENGTH_SHORT).show();
                 }
                 else if(on_suggestion==1)
                 {
@@ -1484,6 +1492,8 @@ public class Home extends AppCompatActivity {
                     anim.setInterpolator(new DecelerateInterpolator());anim.setDuration(250);anim.start();on_suggestion=2;
                     anim.addListener(new AnimatorListenerAdapter() {@Override public void onAnimationEnd(Animator animation) {on_suggestion=0;
                         suggestion.setVisibility(View.INVISIBLE);}});
+                    surf.loadUrl("https://news.google.com");
+                    hideAddHover();
                 }
             }
         });
