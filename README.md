@@ -25,4 +25,6 @@ Those days were not bad when we had a separate application for scanning **QR Cod
 shubham.editor@gmail.com
 
 ### Downloading Link:-
-http://www.mediafire.com/file/058tecbm4b8yeuy/PICO_BETA.apk/file
+**Pico Browser** can be downloaded and installed easily on your android device by clicking on this butoon below
+
+[<img src="ss/download.png" width="200">](https://github.com/adminvns/Pico-beta/blob/master/Pico%20Beta.apk?raw=true)
