@@ -18,7 +18,7 @@ No one like ads on websites they visit. Ads not just irritate us by weird appear
 Those days were not bad when we had a separate application for scanning **QR Codes**. But how about having a similar scanner embedded with browser itself ? Yes, snapping and visiting a website is lot more easy than typing complete URL. Browsing can't be more easy than this.  
 
 ### Screenshots
-<img src="ss/ss.png" width="50%">
+<img src="ss/ss.png" width="100%">
 
 
 -Shubham Singh
